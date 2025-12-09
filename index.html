@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic SEO + Social -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>M2 Business Business choupal</title>
+  <meta name="description" content="M2 Business Store — premium stationery, farsan and home decor. Fast shipping, secure checkout, great deals. Shop now!" />
+  <meta name="author" content="M2 Business Store" />
+  <meta property="og:title" content="M2 Business Store — Premium Stationery, Farsan & Home Decor" />
+  <meta property="og:description" content="Shop premium stationery, farsan and home decor. Offers, curated collections, and secure checkout." />
+  <meta property="og:type" content="website" />
+  <!--<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">-->
+
+  <!-- Google Font -->
+  <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">-->
+
+  <style>
+  /* ------------- Reset & globals ------------- */
+  :root{
+    --bg: #fffbe8;
+    --card: #fffdf6;
+    --accent: #ffca28;
+    --accent-600: #ff9800;
+    --muted: #6b6b6b;
+    --text: #222;
+    --glass: rgba(255,255,255,0.7);
+    --radius: 14px;
+    --shadow: 0 8px 24px rgba(0,0,0,0.12);
+    --max-w: 1200px;
+  }
+  [data-theme="dark"]{
+    --bg: #0f1722;
+    --card: #0b1220;
+    --accent: #ffb74d;
+    --accent-600: #ff8a00;
+    --muted: #98a0ad;
+    --text: #e6eef6;
+    --glass: rgba(255,255,255,0.03);
+    --shadow: 0 8px 24px rgba(0,0,0,0.6);
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, var(--bg), #fff);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  button{font-family:inherit}
+
+  /* ------------- utility container ------------- */
+  .wrap{
+    width:94%;
+    max-width:var(--max-w);
+    margin:0 auto;
+  }
+
+  /* ------------- Header ------------- */
+  header.site-header{
+    position:sticky;
+    top:0;
+    backdrop-filter: blur(6px);
+    background: linear-gradient(90deg, rgba(255,235,59,0.95), rgba(253, 216, 53,0.95));
+    box-shadow: var(--shadow);
+    z-index:1200;
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:14px 0;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+  }
+  .brand .logo {
+    width:44px;height:44px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;font-weight:800;
+    background:linear-gradient(135deg,#fff,#fff7c2);
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    font-size:20px;
+  }
+  .brand h1{font-size:18px;margin:0; letter-spacing:-0.6px}
+  .brand p{margin:0;font-size:12px;color:var(--muted)}
+
+  /* search + actions */
+  .header-actions{display:flex;align-items:center;gap:10px}
+  .search {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:var(--card);
+    padding:8px 12px;
+    border-radius:999px;
+    box-shadow:0 6px 16px rgba(0,0,0,0.06);
+    min-width:220px;
+  }
+  .search input{
+    border:0;background:transparent;outline:none;
+    font-size:14px;width:220px;
+  }
+  .icon-btn{
+    background:transparent;border:0;padding:8px;border-radius:10px;cursor:pointer;
+    display:inline-grid;place-content:center;
+  }
+
+  /* nav links (desktop) */
+  nav.main-nav{display:flex;gap:14px;align-items:center;margin-left:8px}
+  nav.main-nav a{padding:8px 10px;border-radius:10px;font-weight:600}
+  nav.main-nav a:hover{background:var(--glass)}
+
+  /* mobile menu toggle + cart badge */
+  .cart-btn{position:relative}
+  .badge{
+    position:absolute;right:4px;top:4px;background:var(--accent-600);color:#111;padding:4px 7px;border-radius:999px;font-weight:700;font-size:12px;
+  }
+
+  /* ------------- HERO ------------- */
+  .hero{
+    margin-top:18px;
+    border-radius:18px;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(180deg, rgba(255,249,230,0.9), transparent);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:18px;
+    align-items:center;
+    padding:40px;
+  }
+  .hero-left h2{font-size:28px;margin:0 0 8px}
+  .hero-left p{margin:0 0 18px;color:var(--muted)}
+  .hero-cta{
+    display:flex;gap:12px;align-items:center;
+  }
+  .btn{
+    background:var(--accent);border:0;padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer;
+    box-shadow:0 10px 24px rgba(255,180,0,0.12);
+  }
+  .btn.secondary{background:transparent;border:2px solid rgba(0,0,0,0.06);font-weight:600}
+  .hero-right{
+    display:grid;gap:12px;
+  }
+  .mini-card{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+  .mini-card img{width:64px;height:64px;border-radius:10px;object-fit:cover}
+
+  /* ------------- sections ------------- */
+  section.section{padding:48px 0}
+  .section h3{margin:0 0 14px;font-size:20px}
+
+  /* product controls */
+  .controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+  .select, .chip {
+    background:var(--card);padding:8px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.04);
+    min-width:100px;display:inline-flex;align-items:center;gap:8px;
+  }
+  .chip{cursor:pointer}
+  .chip.active{box-shadow:0 8px 18px rgba(0,0,0,0.08);transform:translateY(-4px)}
+
+  /* product grid */
+  .products {
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+    gap:18px;
+  }
+  .product {
+    background:var(--card);
+    border-radius:12px;padding:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;
+  }
+  .product .imgwrap{height:160px;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.3), transparent)}
+  
+  .product h4{margin:0;font-size:16px}
+  .price{font-weight:800}
+  .product .meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
+
+  .add-btn{background:var(--accent-600);border:0;padding:8px;border-radius:10px;color:#111;font-weight:800;cursor:pointer;width:100%}
+
+  /* ------------- Cart Drawer ------------- */
+  .cart-drawer{
+    position:fixed;right:0;top:0;height:100vh;width:360px;max-width:95vw;background:var(--bg);box-shadow: -20px 0 40px rgba(0,0,0,0.12);
+    transform:translateX(110%);transition:transform .36s ease;z-index:1400;padding:20px;display:flex;flex-direction:column;gap:12px;
+  }
+  .cart-drawer.open{transform:translateX(0)}
+  .cart-item{display:flex;gap:12px;align-items:center;padding:8px;border-radius:10px;background:var(--card)}
+  .cart-item img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+  .qty-input{width:70px;padding:6px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
+
+  /* ------------- Testimonials & newsletter ------------- */
+  .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .testimonial{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+  .newsletter{display:flex;gap:10px;align-items:center}
+
+  /* footer */
+  footer.site-footer{background:linear-gradient(90deg,#fbc02d,#fdd835);padding:28px 0;margin-top:24px;border-radius:20px 20px 0 0;box-shadow:var(--shadow)}
+  .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+
+  /* mobile bottom nav */
+  .mobile-bottom{
+    display:none;
+    position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:var(--card);padding:8px;border-radius:999px;box-shadow:var(--shadow);
+    z-index:1600;gap:10px;align-items:center;
+  }
+  .mobile-bottom .btn{padding:10px 12px;border-radius:10px}
+
+  /* floating WhatsApp */
+  .whatsapp {
+    position:fixed;right:18px;bottom:96px;background:#25D366;color:white;border-radius:999px;padding:12px;box-shadow:var(--shadow);
+    z-index:1700;display:flex;gap:10px;align-items:center;text-decoration:none;
+  }
+
+  /* modal */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;z-index:1900;padding:18px}
+  .modal-backdrop.open{display:flex}
+  .modal{background:var(--bg);border-radius:12px;padding:18px;max-width:920px;width:100%;box-shadow:var(--shadow)}
+
+  /* responsive */
+  @media(max-width:1100px){ .hero-grid{grid-template-columns:1fr 320px} }
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr; padding:20px}
+    nav.main-nav{display:none}
+    .search input{width:120px}
+    .mobile-bottom{display:flex}
+    .header-inner{gap:8px}
+  }
+  @media(max-width:520px){
+    .search{min-width:unset; padding:6px 8px}
+    .search input{width:80px}
+    .hero-left h2{font-size:20px}
+    .products{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media(max-width:360px){
+    .products{grid-template-columns:repeat(1,minmax(0,1fr))}
+    .hero-left h2{font-size:18px}
+  }
+
+  /* tiny animations */
+  .fade-in{animation:fadeIn .5s ease both}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header" role="banner">
+  <div class="wrap header-inner" role="navigation" aria-label="Main navigation">
+    <a class="brand" href="#" onclick="scrollToTop(event)">
+      <div class="logo" aria-hidden="true">M2</div>
+      <div>
+        <h1>M2 Business Business choupal</h1>
+        <p>Stationery • Farsan • Home decor</p>
+      </div>
+    </a>
+
+    <div style="display:flex;align-items:center;gap:12px">
+      <!-- Desktop nav -->
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#collections">Collections</a>
+        <a href="#featured">Featured</a>
+        <a href="#deals">Deals</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <!-- Search -->
+      <div class="search" role="search" aria-label="Site search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.35-4.35" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><circle cx="11" cy="11" r="6.1" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle></svg>
+        <input id="search" type="search" placeholder="Search products, e.g. notebook" aria-label="Search" />
+        <button class="icon-btn" id="clearSearch" title="Clear search" style="display:none">✕</button>
+      </div>
+
+      <!-- Theme toggle -->
+      <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-pressed="false" aria-label="Toggle dark mode">
+        🌙
+      </button>
+
+      <!-- Cart -->
+      <button class="icon-btn cart-btn" id="openCart" aria-label="Open cart" title="Open cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 3h2l1.6 9.6a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L21 7H6" stroke="#000" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="10" cy="20" r="1.5" fill="#000"></circle><circle cx="18" cy="20" r="1.5" fill="#000"></circle></svg>
+        <span class="badge" id="cartCount" style="display:none">0</span>
+      </button>
+
+      <!-- Mobile menu -->
+      <button class="icon-btn" id="menuBtn" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+
+  <!-- mobile menu slide -->
+  <div id="mobileMenu" style="display:none;padding:12px;background:var(--card);box-shadow:var(--shadow);">
+    <div class="wrap" style="display:flex;gap:12px;flex-direction:column">
+      <a href="#collections" onclick="closeMobileMenu()">Collections</a>
+      <a href="#featured" onclick="closeMobileMenu()">Featured</a>
+      <a href="#deals" onclick="closeMobileMenu()">Deals</a>
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero wrap" aria-labelledby="heroHeading">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <h2 id="heroHeading">Quality goods for everyday joy — curated with care</h2>
+        <p>Stationery | Farsan | Home Decor — curated collections, fast delivery, secure checkout. Flat ₹200 OFF on selected items.</p>
+
+        <div class="hero-cta">
+          <button class="btn" onclick="filterBy('all')">Shop Collections</button>
+          <button class="btn secondary" onclick="document.getElementById('featured').scrollIntoView({behavior:'smooth'})">Explore Featured</button>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+          <div class="chip">Free shipping over ₹799</div>
+          <div class="chip">Easy returns</div>
+          <div class="chip">Secure payments</div>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="false">
+        <div class="mini-card fade-in">
+          <img src="statinary.png" alt="">
+          <div>
+            <strong>Premium Notebooks</strong>
+            <div style="font-size:13px;color:var(--muted)">Popular — Limited stock</div>
+          </div>
+        </div>
+        <div class="mini-card fade-in" style="animation-delay:80ms">
+          <img src="C:\Users\LENOVO\Downloads\Business choupal\snacks pack.jpeg" alt="">
+          <div>
+            <strong>Farsan Packs</strong>
+            <div style="font-size:13px;color:var(--muted)">Buy combos & save more</div>
+          </div>
+        </div>
+        <div class="mini-card fade-in" style="animation-delay:160ms">
+          <img src="C:\Users\LENOVO\Downloads\Business choupal\homedecor.jpg" alt="">
+          <div>
+            <strong>Home Decor</strong>
+            <div style="font-size:13px;color:var(--muted)">Make spaces joyful</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections / Filters -->
+  <section id="collections" class="section wrap" aria-labelledby="collectionsHeading">
+    <h3 id="collectionsHeading">Collections</h3>
+
+    <div class="controls" role="toolbar" aria-label="Product controls">
+      <div class="select">
+        <label for="sort" style="font-weight:600;color:var(--muted);font-size:13px">Sort</label>
+        <select id="sort" aria-label="Sort products" onchange="applySort(event)" style="background:transparent;border:0;outline:none">
+          <option value="popular">Most popular</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+        </select>
+      </div>
+
+      <div class="select" style="min-width:160px">
+        <label for="category" style="font-weight:600;color:var(--muted);font-size:13px">Category</label>
+        <select id="category" onchange="filterBy(this.value)" aria-label="Filter by category" style="background:transparent;border:0;outline:none">
+          <option value="all">All</option>
+          <option value="stationery">Stationery</option>
+          <option value="farsan">Farsan</option>
+          <option value="decor">Home Decor</option>
+        </select>
+      </div>
+
+      <div style="margin-left:auto;display:flex;gap:8px">
+        <button class="chip" onclick="showDeals()">🔥 Today's Deals</button>
+        <button class="chip" onclick="openNewsletter()">Newsletter</button>
+      </div>
+    </div>
+
+    <!-- Products grid populated by JS -->
+    <div id="products" class="products" aria-live="polite">
+      
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section id="featured" class="section wrap" aria-labelledby="featuredHeading">
+    <h3 id="featuredHeading">Featured Products</h3>
+    <div id="featuredList" class="products"></div>
+  </section>
+
+  <!-- Deals -->
+  <section id="deals" class="section wrap" aria-labelledby="dealsHeading">
+    <h3 id="dealsHeading">Hot Deals</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+      <div class="product" style="background:linear-gradient(180deg,#fff8e0,transparent);">
+        <div class="imgwrap"><img src="C:\Users\LENOVO\Downloads\Business choupal\sale offer.jpg" alt="deal" loading="lazy"></div>
+        <h4>End Season Mega Sale</h4>
+        <div class="meta"><div class="price">Flat ₹200 OFF</div><div style="color:var(--muted)">Limited</div></div>
+        <button class="add-btn" onclick="window.location.hash='#collections'">Shop Now</button>
+      </div>
+      <div class="product">
+        <div class="imgwrap"><img src="C:\Users\LENOVO\Downloads\Business choupal\snacks pack.jpeg" alt="farsan" loading="lazy"></div>
+        <h4>Farsan Combo Pack</h4>
+        <div class="meta"><div class="price">₹399</div><div style="color:var(--muted)">Save 20%</div></div>
+        <button class="add-btn" onclick="addToCartById('p_farsan_combo')">Add to cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section wrap" aria-labelledby="testiHeading">
+    <h3 id="testiHeading">Customer Reviews</h3>
+    <div class="testimonials" id="testimonials">
+      <div class="testimonial">
+        <strong>Devan K.</strong>
+        <p style="margin:8px 0;color:var(--muted)">"Fast shipping and product quality is excellent — notebooks are durable."</p>
+      </div>
+      <div class="testimonial">
+        <strong>Mahesh Patil.</strong>
+        <p style="margin:8px 0;color:var(--muted)">"Loved the farsan combo. Great value for money!"</p>
+      </div>
+      <div class="testimonial">
+        <strong>Dhananjay Bramahane.</strong>
+        <p style="margin:8px 0;color:var(--muted)">"Customer support was quick to help with an exchange."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / FAQ -->
+  <section class="section wrap" aria-labelledby="newsletterHeading">
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:18px;align-items:center">
+      <div>
+        <h3 id="newsletterHeading">Join our newsletter</h3>
+        <p style="color:var(--muted)">Get exclusive discounts and product launches. Unsubscribe anytime.</p>
+        <form id="newsletterForm" class="newsletter" onsubmit="subscribeNewsletter(event)" aria-label="Subscribe to newsletter">
+          <input id="nlEmail" type="email" placeholder="you@example.com" required style="padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);flex:1" >
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div style="background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow)">
+        <h4>FAQ</h4>
+        <details>
+          <summary>What is delivery time?</summary>
+          <p style="margin:8px 0;color:var(--muted)">Usually 2-5 business days depending on location.</p>
+        </details>
+        <details>
+          <summary>Return policy?</summary>
+          <p style="margin:8px 0;color:var(--muted)">15 days return window for unopened items.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section wrap" aria-labelledby="aboutHeading">
+    <h3 id="aboutHeading">About M2 Business Business choupal</h3>
+    <p style="color:var(--muted)">Welcome to M2 Business Store – your one-stop destination for Stationery, Farsan, and Home Decor. We believe in offering premium-quality products designed to add value, creativity, and convenience to your everyday life. <br><b>Our Mission</b>
+    <br>To provide high-quality and affordable products that inspire creativity and bring joy to homes.<br> 
+    <b>Our Vision</b> To become Mumbai’s most-loved brand in stationery, farsan snacks, and home decor. 
+    <br><b>Why Choose Us</b><br> 
+    •Premium-quality <br> 
+    • Affordable pricing <br> 
+    • Fast delivery  <br>
+    • Trusted by thousands</p>
+  
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section wrap" aria-labelledby="contactHeading">
+    <h3 id="contactHeading">Contact Us</h3>
+    <form id="contactForm" onsubmit="submitContact(event)" style="display:grid;grid-template-columns:1fr 1fr;gap:12px" aria-label="Contact form">
+      <input type="text" id="name" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+      <input type="email" id="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+      <textarea id="message" placeholder="Message" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);grid-column:1 / -1"></textarea>
+      <button class="btn" type="submit" style="grid-column:1 / -1">Send Message</button>
+    </form>
+  </section>
+
+</main>
+
+<!-- Cart drawer -->
+<aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-label="Shopping cart">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <h4 style="margin:0">Your Cart</h4>
+    <div>
+      <button class="icon-btn" onclick="closeCart()" aria-label="Close cart">✕</button>
+    </div>
+  </div>
+
+  <div id="cartList" style="overflow:auto;flex:1;padding-right:6px"></div>
+
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div style="display:flex;justify-content:space-between;font-weight:700">
+      <div>Subtotal</div><div id="cartSubtotal">₹0</div>
+    </div>
+    <button class="btn" onclick="checkout()">Checkout</button>
+    <button class="btn secondary" onclick="clearCart()" style="background:transparent;border:1px solid rgba(0,0,0,0.06)">Clear Cart</button>
+  </div>
+</aside>
+
+<!-- Modal (quick view / product) -->
+<div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal" role="document" id="productModal">
+    <!-- content injected by JS -->
+  </div>
+</div>
+
+<!-- floating whatsapp -->
+<a class="whatsapp" href="https://wa.me/919999999999" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 1 1-2.4-5.9L21 3v8.5z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  <span style="font-weight:700;">Chat</span>
+</a>
+
+<!-- mobile bottom nav -->
+<div class="mobile-bottom" role="navigation" aria-label="Mobile actions">
+  <button class="btn" onclick="filterBy('all')">Shop</button>
+  <button class="btn" id="mbCartBtn" onclick="openCart()">Cart (<span id="mbCartCount">0</span>)</button>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="wrap footer-grid" style="align-items:start">
+    <div>
+      <strong>M2 Business Business choupal</strong>
+      <p style="margin:6px 0;color:var(--muted)">Premium stationery, farsan & home decor.</p>
+    </div>
+    <div>
+      <strong>Links</strong>
+      <nav style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+        <a href="#collections">Collections</a>
+        <a href="#deals">Deals</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <div style="margin-top:8px;color:var(--muted)">Email: support@m2business.in</div>
+      <div style="color:var(--muted)">Phone: +91 9999 999 999</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===========================
+   Sample product data
+   In a real site this would come from an API.
+   =========================== */
+const PRODUCTS = [
+  { id:'p_nb_classic', title:'Classic Notebook', price:149, category:'stationery', img:'homedecor.jpg', popular:9, desc:'Durable 120-page notebook, perfect for notes.' },
+  { id:'p_pen_premium', title:'Premium Pen Set', price:299, category:'stationery', img:'pen.jpeg', popular:8, desc:'Smooth metal pens — set of 3.' },
+  { id:'p_planner_daily', title:'Daily Planner', price:399, category:'stationery', img:'statinary.png', popular:7, desc:'Plan your day, week & goals.' },
+  { id:'p_farsan_combo', title:'Farsan Combo Pack', price:399, category:'farsan', img:'snacks pack.jpeg', popular:10, desc:'Assorted farsan combo, fresh & tasty.' },
+  { id:'p_decor_vase', title:'Decorative Vase', price:599, category:'decor', img:'pen.jpeg', popular:6, desc:'Handmade ceramic vase for home.' },
+  { id:'p_candle_set', title:'Aromatic Candle Set', price:499, category:'decor', img:'smile.jpg', popular:5, desc:'Set of 4 scented candles.' }
+];
+
+/* ===========================
+   Simple app state
+   =========================== */
+let state = {
+  products: PRODUCTS.slice(),
+  category: 'all',
+  sort: 'popular',
+  cart: JSON.parse(localStorage.getItem('m2_cart') || '[]')
+};
+
+/* ========== Utilities ========== */
+const format = v => '₹' + v.toFixed(0);
+
+function saveCart(){ localStorage.setItem('m2_cart', JSON.stringify(state.cart)); updateCartUI(); }
+function getCartCount(){ return state.cart.reduce((s, c) => s + c.qty, 0); }
+
+/* ========== Render products ========== */
+function renderProducts(list = state.products){
+  const container = document.getElementById('products');
+  container.innerHTML = '';
+  if(list.length === 0){
+    container.innerHTML = '<div style="color:var(--muted)">No products match your search.</div>';
+    return;
+  }
+  list.forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'product fade-in';
+    el.innerHTML = `
+      <div class="imgwrap"><img loading="lazy" src="${p.img}" alt="${escapeHtml(p.title)}"></div>
+      <h4>${escapeHtml(p.title)}</h4>
+      <div style="color:var(--muted);font-size:13px">${escapeHtml(p.category)}</div>
+      <div class="meta"><div class="price">${format(p.price)}</div><div style="font-size:13px;color:var(--muted)">⭐ ${p.popular}</div></div>
+      <button class="add-btn" onclick="addToCartById('${p.id}')">Add to cart</button>
+      <button class="icon-btn" style="margin-top:6px" onclick="openQuickView('${p.id}')">Quick view</button>
+    `;
+    container.appendChild(el);
+  });
+}
+
+/* escape to avoid HTML injection in titles */
+function escapeHtml(s){ return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;') }
+
+/* initial render */
+renderProducts();
+
+/* Featured list (top 3 popular) */
+function renderFeatured(){
+  const featured = [...PRODUCTS].sort((a,b)=>b.popular-a.popular).slice(0,4);
+  const f = document.getElementById('featuredList');
+  f.innerHTML = '';
+  featured.forEach(p=>{
+    const el = document.createElement('div');
+    el.className='product fade-in';
+    el.innerHTML=`
+      <div class="imgwrap"><img loading="lazy" src="${p.img}" alt="${escapeHtml(p.title)}"></div>
+      <h4>${escapeHtml(p.title)}</h4>
+      <div class="meta"><div class="price">${format(p.price)}</div><div style="color:var(--muted)">${escapeHtml(p.category)}</div></div>
+      <div style="display:flex;gap:8px">
+        <button class="add-btn" onclick="addToCartById('${p.id}')">Add</button>
+        <button class="icon-btn" onclick="openQuickView('${p.id}')">View</button>
+      </div>
+    `;
+    f.appendChild(el);
+  });
+}
+renderFeatured();
+
+/* ========== Filtering & sorting ========== */
+function filterBy(cat){
+  state.category = cat;
+  document.getElementById('category').value = cat;
+  applyFilters();
+  window.scrollTo({top: document.getElementById('collections').offsetTop - 80, behavior:'smooth'});
+}
+function applySort(e){
+  state.sort = e.target ? e.target.value : document.getElementById('sort').value;
+  applyFilters();
+}
+function applyFilters(){
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  let list = PRODUCTS.filter(p => {
+    if(state.category !== 'all' && p.category !== state.category) return false;
+    if(q && !(p.title.toLowerCase().includes(q) || p.category.toLowerCase().includes(q) || p.desc?.toLowerCase().includes(q))) return false;
+    return true;
+  });
+  if(state.sort === 'price-asc') list.sort((a,b)=>a.price-b.price);
+  else if(state.sort === 'price-desc') list.sort((a,b)=>b.price-a.price);
+  else list.sort((a,b)=>b.popular-b.popular ? b.popular - a.popular : a.title.localeCompare(b.title)); // popular default
+  renderProducts(list);
+}
+
+/* ========== Search UI ========== */
+const searchInput = document.getElementById('search');
+const clearBtn = document.getElementById('clearSearch');
+searchInput.addEventListener('input', ()=>{
+  document.getElementById('clearSearch').style.display = searchInput.value ? 'inline-block' : 'none';
+  applyFilters();
+});
+clearBtn.addEventListener('click', ()=>{ searchInput.value=''; clearBtn.style.display='none'; applyFilters(); });
+
+/* ========== Quick view modal ========== */
+function openQuickView(id){
+  const p = PRODUCTS.find(x=>x.id===id);
+  if(!p) return;
+  const backdrop = document.getElementById('modalBackdrop');
+  const modal = document.getElementById('productModal');
+  modal.innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center">
+      <div><img src="${p.img}" alt="${escapeHtml(p.title)}" style="width:100%;height:320px;object-fit:cover;border-radius:8px"></div>
+      <div>
+        <h3 style="margin-top:0">${escapeHtml(p.title)}</h3>
+        <div style="font-weight:800;margin-top:6px">${format(p.price)}</div>
+        <p style="color:var(--muted)">${escapeHtml(p.desc || '')}</p>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn" onclick="addToCartById('${p.id}'); closeModal()">Add to cart</button>
+          <button class="btn secondary" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  `;
+  backdrop.classList.add('open');
+  backdrop.setAttribute('aria-hidden','false');
+  setTimeout(()=> modal.querySelector('button')?.focus(), 120);
+}
+function closeModal(){ document.getElementById('modalBackdrop').classList.remove('open'); document.getElementById('modalBackdrop').setAttribute('aria-hidden','true'); }
+
+/* close modal when clicking backdrop */
+document.getElementById('modalBackdrop').addEventListener('click', (e)=>{
+  if(e.target === e.currentTarget) closeModal();
+});
+
+/* ========== Cart logic ========== */
+function addToCartById(id){
+  const prod = PRODUCTS.find(p=>p.id===id);
+  if(!prod) return alert('Product not found');
+  const existing = state.cart.find(i=>i.id===id);
+  if(existing) existing.qty += 1;
+  else state.cart.push({ id: prod.id, title: prod.title, price: prod.price, img: prod.img, qty:1 });
+  saveCart();
+  openCart();
+  showToast(`${prod.title} added to cart`);
+}
+function updateCartUI(){
+  const list = document.getElementById('cartList');
+  list.innerHTML = '';
+  if(state.cart.length === 0){
+    list.innerHTML = '<div style="color:var(--muted)">Your cart is empty.</div>';
+  } else {
+    state.cart.forEach(item=>{
+      const row = document.createElement('div');
+      row.className = 'cart-item';
+      row.innerHTML = `
+        <img src="${item.img}" alt="${escapeHtml(item.title)}">
+        <div style="flex:1">
+          <div style="font-weight:700">${escapeHtml(item.title)}</div>
+          <div style="color:var(--muted);font-size:13px">${format(item.price)}</div>
+          <div style="margin-top:6px;display:flex;gap:8px;align-items:center">
+            <input class="qty-input" type="number" min="1" value="${item.qty}" onchange="changeQty('${item.id}',this.value)">
+            <button class="icon-btn" onclick="removeFromCart('${item.id}')" title="Remove">Remove</button>
+          </div>
+        </div>
+      `;
+      list.appendChild(row);
+    });
+  }
+  const subtotal = state.cart.reduce((s,i)=>s + i.price * i.qty, 0);
+  document.getElementById('cartSubtotal').textContent = format(subtotal);
+  const cCount = getCartCount();
+  const cartCountEl = document.getElementById('cartCount');
+  if(cCount>0){ cartCountEl.style.display='inline-block'; cartCountEl.textContent = cCount; } else cartCountEl.style.display='none';
+  document.getElementById('mbCartCount').textContent = cCount;
+}
+function changeQty(id, value){
+  value = Math.max(1, parseInt(value||1));
+  const it = state.cart.find(i=>i.id===id);
+  if(it) it.qty = value;
+  saveCart();
+}
+function removeFromCart(id){
+  state.cart = state.cart.filter(i=>i.id!==id);
+  saveCart();
+}
+function clearCart(){ if(confirm('Clear cart?')) { state.cart = []; saveCart(); closeCart(); } }
+function checkout(){
+  if(state.cart.length===0){ alert('Your cart is empty'); return; }
+  // In production, this would go to the checkout API.
+  alert('Redirecting to secure checkout (demo)');
+  // demo: clear cart
+  state.cart = []; saveCart(); closeCart();
+}
+function openCart(){
+  document.getElementById('cartDrawer').classList.add('open');
+  document.getElementById('cartDrawer').setAttribute('aria-hidden','false');
+  updateCartUI();
+}
+function closeCart(){
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('cartDrawer').setAttribute('aria-hidden','true');
+}
+
+/* ========== small helpers ========== */
+function removeItemFromArray(arr, id){ return arr.filter(x=>x.id !== id); }
+
+/* ========== UI helpers ========== */
+function showDeals(){ filterBy('all'); document.getElementById('deals').scrollIntoView({behavior:'smooth'}); showToast('Showing deals'); }
+function openNewsletter(){ document.getElementById('nlEmail').focus(); showToast('Enter email to subscribe'); }
+
+/* toast */
+let toastTimer;
+function showToast(msg){
+  clearTimeout(toastTimer);
+  const t = document.getElementById('siteToast');
+  if(!t){
+    const el = document.createElement('div');
+    el.id='siteToast';
+    el.style.position='fixed';
+    el.style.left='50%';
+    el.style.transform='translateX(-50%)';
+    el.style.bottom='22px';
+    el.style.background='rgba(0,0,0,0.8)';
+    el.style.color='#fff';
+    el.style.padding='10px 16px';
+    el.style.borderRadius='999px';
+    el.style.zIndex=2000;
+    el.style.fontWeight=700;
+    document.body.appendChild(el);
+  }
+  const el = document.getElementById('siteToast');
+  el.textContent = msg;
+  el.style.opacity = '1';
+  toastTimer = setTimeout(()=> el.style.opacity='0', 2400);
+}
+
+/* ========== persistence on load ========== */
+updateCartUI();
+
+/* ========== Mobile menu toggle ========== */
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', ()=>{
+  const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+  menuBtn.setAttribute('aria-expanded', String(!expanded));
+  mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+});
+function closeMobileMenu(){ mobileMenu.style.display = 'none'; menuBtn.setAttribute('aria-expanded','false'); }
+
+/* ========== header actions ========== */
+function scrollToTop(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); }
+
+/* ========== keyboard: ESC closes modal/drawers  ========== */
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape'){
+    closeModal(); closeCart(); closeMobileMenu();
+  }
+});
+
+/* ========== contact & newsletter forms (demo) ========== */
+function submitContact(e){
+  e.preventDefault();
+  const nm = document.getElementById('name').value;
+  showToast(`Thanks ${nm}, we will reply soon`);
+  document.getElementById('contactForm').reset();
+}
+function subscribeNewsletter(e){
+  e.preventDefault();
+  const email = document.getElementById('nlEmail').value;
+  showToast(`Subscribed ${email}`);
+  document.getElementById('newsletterForm').reset();
+}
+
+/* ========== Theme toggle (dark mode) ========== */
+const themeToggle = document.getElementById('themeToggle');
+(function initTheme(){
+  const saved = localStorage.getItem('m2_theme') || 'light';
+  if(saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  themeToggle.textContent = saved === 'dark' ? '☀️' : '🌙';
+  themeToggle.setAttribute('aria-pressed', saved === 'dark');
+})();
+themeToggle.addEventListener('click', ()=>{
+  const current = document.documentElement.getAttribute('data-theme') === 'dark';
+  if(current) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('m2_theme','light'); themeToggle.textContent = '🌙'; themeToggle.setAttribute('aria-pressed','false'); }
+  else { document.documentElement.setAttribute('data-theme','dark'); localStorage.setItem('m2_theme','dark'); themeToggle.textContent = '☀️'; themeToggle.setAttribute('aria-pressed','true'); }
+});
+
+/* ========== small helpers for escaping & safety ========== */
+window.escapeHtml = escapeHtml;
+
+/* ------------- Accessibility: focus outline for keyboard only ------------- */
+(function(){
+  function handleFirstTab(e) {
+    if(e.key === 'Tab'){
+      document.documentElement.classList.add('user-is-tabbing');
+      window.removeEventListener('keydown', handleFirstTab);
+    }
+  }
+  window.addEventListener('keydown', handleFirstTab);
+})();
+
+/* ========== small init actions ========== */
+// show sample filter on load
+applyFilters();
+
+</script>
+</body>
+</html>
